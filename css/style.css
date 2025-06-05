@@ -39,8 +39,14 @@
       border-radius: 0.8rem;
       padding: 2rem;
       box-shadow: 0 0.4rem 2rem rgba(201, 241, 233, 0.748);
-      transition: border-color 0.3s ease;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
       position: relative;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
     }
 
     /* Modifier for not available product */
@@ -86,7 +92,7 @@
     /* Product rating */
     .product__rating {
       font-size: 2rem;
-      color: #facc15; /* Tailwind yellow-400 */
+      color: #facc15;
       margin-bottom: 1.5rem;
       user-select: none;
     }
@@ -139,6 +145,7 @@
       color: #000;
       user-select: none;
       cursor: pointer;
+      padding-right: 1rem;
     }
 
     .cart__badge {
